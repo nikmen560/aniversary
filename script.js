@@ -1,10 +1,20 @@
 var i = 1;
-$(":header").click(function () {
+$(document).click(function () {
   $("#container").append("<div id = 'heart'></div>");
-  
-  $("#photos").prepend(`<img src="./img/photo${i}.jpg" style="max-width:100%;height:40%;" alt=""></img>`);
-  i++;
-  
+  $("#button").text("продолжай")
+
+  if (i !== 13) {
+    $("#photos").prepend(
+      `<img src="./img/photo${i}.jpg" style="max-width:100%;height:40%;" alt=""></img>`
+    );
+    i++;
+  } else {
+    $("#photos").remove();
+    $("#button").remove();
+    $("#container").append(
+      `<h3>Жду тебя, кисик, здесь, в загнивающей европке, люблю целую &#128147</h3>`
+    );
+  }
 
   anime({
     targets: "#heart",
@@ -35,5 +45,4 @@ $(":header").click(function () {
 
   $("#heart").css("left", Math.random() * 260);
   $("#heart").css("top", Math.random() * 240);
-
 });
