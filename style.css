@@ -1,0 +1,85 @@
+h1 {
+  color: white;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+}
+
+h3 {
+  font-family: "Josefin Slab", serif;
+  color: white;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+}
+
+#heart {
+  width: 10px;
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  text-align: center;
+  background-color: "blue";
+  width: 10px;
+  height: 90px;
+}
+
+#heart:before,
+#heart:after {
+  position: absolute;
+  background-color: "blue";
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: red;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  background: #fff;
+  -webkit-animation: random 5s infinite;
+  animation: random 5s infinite;
+}
+
+@keyframes random {
+  15% {
+    background: red;
+  }
+  30% {
+    background: yellow;
+  }
+  45% {
+    background: green;
+  }
+  60% {
+    background: blue;
+  }
+  75% {
+    background: pink;
+  }
+}
+#heart:after {
+  background-color: "blue";
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
