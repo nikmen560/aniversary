@@ -2,9 +2,6 @@ var i = 1;
 $(":header").click(function () {
   $("#container").append("<div id = 'heart'></div>");
   
-  if(i === 4) {
-    $("img").remove();
-  }
   $("#photos").prepend(`<img src="./img/photo${i}.jpg" style="max-width:100%;height:40%;" alt=""></img>`);
   i++;
   
